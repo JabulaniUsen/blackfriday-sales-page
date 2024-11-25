@@ -15,12 +15,10 @@ function App() {
           <h2>Our Services</h2>
           <div className="services-grid">
             <div className="service-card">
-              <Figma />
               <h3>Web Design</h3>
               <p>Captivating and responsive designs that stand out.</p>
             </div>
             <div className="service-card">
-              <CodeXml />
               <h3>Web Development</h3>
               <p>High-performance websites tailored to your needs.</p>
             </div>
