@@ -5,10 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import logo from './assets/logo.png';
 import banner from './assets/banner.jpg';
 import webdesign from './assets/webdesign.jpg';
-import webdev from './assets/webdev.jpg';
+import wrap from './assets/wrap.jpg';
 import socials from './assets/soocial.jpg';
 import graphics from './assets/graphics.png';
-import hosting from './assets/hosting.jpg';
+import print from './assets/print.jpg';
 import { BiSolidGift, BiXCircle } from "react-icons/bi";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
@@ -21,8 +21,8 @@ function App() {
     e.preventDefault();
     if (email.trim()) {
       toast.success("Joined the whitelist successfully!");
-      setEmail(""); // Clear the input
-      setTimeout(() => setShowPopup(false), 1000); // Close popup after 1 second
+      setEmail(""); 
+      setTimeout(() => setShowPopup(false), 1000);
     } else {
       toast.error("Please enter a valid email address.");
     }
@@ -34,60 +34,71 @@ function App() {
       <header className="header">
         <div className="logo">
           <img src={logo} alt="Company Logo" />
-          <button className='getstarted'>Get Started</button>
+          <button className='getstarted'>
+            <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">Get Started</a>
+          </button>
         </div>
         <img className="banner" src={banner} alt="" />
       </header>
 
       {/* Services Section */}
-      <section className="services">
-        <div className="container">
-          <h2>Our Services</h2>
-          <div className="services-grid">
-            <div className="service-card">
-              <img src={webdesign} alt="Web Design" className="service-image" />
-              <h3>Web Design</h3>
-              <p>Captivating and responsive designs that stand out.</p>
-            </div>
-            <div className="service-card">
-              <img src={graphics} alt="Graphic Design" className="service-image" />
-              <h3>Graphic Design</h3>
-              <p>Captivate your audience with unique and beautiful graphic designs for your social media.</p>
-            </div>
-            <div className="service-card">
-              <img src={webdev} alt="Web Development" className="service-image" />
-              <h3>Web Development</h3>
-              <p>High-performance websites tailored to your needs.</p>
-            </div>
-            <div className="service-card">
-              <img src={hosting} alt="Web Hosting" className="service-image" />
-              <h3>Web Hosting</h3>
-              <p>Fast, reliable, and secure hosting solutions.</p>
-            </div>
-            <div className="service-card">
-              <img src={socials} alt="Social Media Management" className="service-image" />
-              <h3>Social Media Management</h3>
-              <p>Grow your online presence with expert social media strategies.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="services">
+  <div className="container">
+    <h2>Our Services</h2>
+    <div className="services-grid">
+      <div className="service-card">
+        <img src={webdesign} alt="Web Design" className="service-image" />
+        <h3>Web Design</h3>
+        <p>Captivating and responsive designs that stand out.</p>
+      </div>
+      <div className="service-card">
+        <img src={graphics} alt="Graphic Design" className="service-image" />
+        <h3>Graphic Design</h3>
+        <p>Captivate your audience with unique and beautiful graphic designs for your social media.</p>
+      </div>
+      <div className="service-card">
+        <img src={print} alt="Large Format Printing" className="service-image" />
+        <h3>Large Format Printing</h3>
+        <p>High-quality, eye-catching prints for banners, posters, and more.</p>
+      </div>
+      <div className="service-card">
+        <img src={wrap} alt="Vehicle Wrapping" className="service-image" />
+        <h3>Vehicle Wrapping</h3>
+        <p>Professional vehicle wraps to showcase your brand on the go.</p>
+      </div>
+      <div className="service-card">
+        <img src={socials} alt="Social Media Management" className="service-image" />
+        <h3>Social Media Management</h3>
+        <p>Grow your online presence with expert social media strategies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Call to Action */}
       <section className="cta">
         <h2>Take Advantage of These Limited-Time Offers!</h2>
         <p>Contact us now to transform your online presence.</p>
-        <button>Get Started Today!</button>
+        <button>
+          <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">Get Started Today!</a>
+        </button>
       </section>
 
       {/* Schedule Call Section */}
-      <section className="schedule-call">
-        <div className="container">
-          <h2>Schedule a Free Consultation</h2>
-          <p>Let’s discuss how we can help you achieve your goals.</p>
-          <iframe src="https://calendly.com/your-calendly-link" title="Schedule a call"></iframe>
-        </div>
-      </section>
+<section className="schedule-call dark-theme">
+  <div className="container">
+    <h2>Schedule a Free Consultation</h2>
+    <p>Let’s discuss how we can help you achieve your goals. Our experts are ready to assist you in crafting tailored solutions for your needs.</p>
+    <button className="schedule-call-button">
+      <a href="https://www.tbcreations.com/booking/" target="_blank" rel="noopener noreferrer">
+        Book a Call Now
+      </a>
+    </button>
+  </div>
+</section>
+
+
 
       {/* Newsletter Subscription */}
       <section className="newsletter">
