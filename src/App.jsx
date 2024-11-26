@@ -114,7 +114,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        <p>&copy; 2024 Tbcreations. All Rights Reserved.</p>
         <div className="social-links">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <i className="icon"><FaFacebook /></i>
@@ -155,7 +155,7 @@ function App() {
           transition={{ duration: 0.3 }}
         >
           <BiXCircle className='closePopup' onClick={() => {setShowPopup(false)}}/>
-          <h3>Join the Whitelist</h3>
+          <h3>Join the Wait list</h3>
           <p>Be the first to access our exclusive deals and updates!</p>
           <form onSubmit={handleWhitelistSubmit}>
             <input
