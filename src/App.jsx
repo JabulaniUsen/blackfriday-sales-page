@@ -1,12 +1,42 @@
-import './index.css';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import logo from './assets/logo.png';
+import banner from './assets/banner.jpg';
+import webdesign from './assets/webdesign.jpg';
+import webdev from './assets/webdev.jpg';
+import socials from './assets/soocial.jpg';
+import graphics from './assets/graphics.png';
+import hosting from './assets/hosting.jpg';
+import { BiSolidGift, BiXCircle } from "react-icons/bi";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleWhitelistSubmit = (e) => {
+    e.preventDefault();
+    if (email.trim()) {
+      toast.success("Joined the whitelist successfully!");
+      setEmail(""); // Clear the input
+      setTimeout(() => setShowPopup(false), 1000); // Close popup after 1 second
+    } else {
+      toast.error("Please enter a valid email address.");
+    }
+  };
+
   return (
     <div>
       {/* Header */}
       <header className="header">
-        <h1>Black Friday Mega Sale</h1>
-        <p>Unleash Your Online Potential with Exclusive Deals!</p>
+        <div className="logo">
+          <img src={logo} alt="Company Logo" />
+          <button className='getstarted'>Get Started</button>
+        </div>
+        <img className="banner" src={banner} alt="" />
       </header>
 
       {/* Services Section */}
@@ -15,16 +45,29 @@ function App() {
           <h2>Our Services</h2>
           <div className="services-grid">
             <div className="service-card">
+              <img src={webdesign} alt="Web Design" className="service-image" />
               <h3>Web Design</h3>
               <p>Captivating and responsive designs that stand out.</p>
             </div>
             <div className="service-card">
+              <img src={graphics} alt="Graphic Design" className="service-image" />
+              <h3>Graphic Design</h3>
+              <p>Captivate your audience with unique and beautiful graphic designs for your social media.</p>
+            </div>
+            <div className="service-card">
+              <img src={webdev} alt="Web Development" className="service-image" />
               <h3>Web Development</h3>
               <p>High-performance websites tailored to your needs.</p>
             </div>
             <div className="service-card">
+              <img src={hosting} alt="Web Hosting" className="service-image" />
               <h3>Web Hosting</h3>
               <p>Fast, reliable, and secure hosting solutions.</p>
+            </div>
+            <div className="service-card">
+              <img src={socials} alt="Social Media Management" className="service-image" />
+              <h3>Social Media Management</h3>
+              <p>Grow your online presence with expert social media strategies.</p>
             </div>
           </div>
         </div>
@@ -42,17 +85,84 @@ function App() {
         <div className="container">
           <h2>Schedule a Free Consultation</h2>
           <p>Let’s discuss how we can help you achieve your goals.</p>
-          <iframe
-            src="https://calendly.com/your-calendly-link"
-            title="Schedule a call"
-          ></iframe>
+          <iframe src="https://calendly.com/your-calendly-link" title="Schedule a call"></iframe>
+        </div>
+      </section>
+
+      {/* Newsletter Subscription */}
+      <section className="newsletter">
+        <div className="container">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Get the latest updates, tips, and exclusive deals straight to your inbox!</p>
+          <form className="newsletter-form">
+            <input type="email" placeholder="Enter your email address" aria-label="Email Address" />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
         <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        <div className="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <i className="icon"><FaFacebook /></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <i className="icon"><FaTwitter /></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <i className="icon"><FaInstagram /></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i className="icon"><FaLinkedin /></i>
+          </a>
+        </div>
       </footer>
+
+
+      {/* Bouncing Icon */}
+      <motion.div
+        className="bouncing-icon"
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          repeatType: 'loop',
+        }}
+        onClick={() => setShowPopup(true)}
+      >
+        <BiSolidGift />
+      </motion.div>
+
+      {/* Popup */}
+      {showPopup && (
+        <motion.div
+          className="popup"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          <BiXCircle className='closePopup' onClick={() => {setShowPopup(false)}}/>
+          <h3>Join the Whitelist</h3>
+          <p>Be the first to access our exclusive deals and updates!</p>
+          <form onSubmit={handleWhitelistSubmit}>
+            <input
+              type="email"
+              className='whiteListInput'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              aria-label="Email Address"
+              required
+            />
+            <button type="submit">Join</button>
+          </form>
+        </motion.div>
+      )}
+
+      {/* Toast Notifications */}
+      <ToastContainer />
     </div>
   );
 }
