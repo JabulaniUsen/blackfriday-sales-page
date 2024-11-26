@@ -11,6 +11,7 @@ import graphics from './assets/graphics.png';
 import print from './assets/print.jpg';
 import { BiSolidGift, BiXCircle } from "react-icons/bi";
 import { FaFacebook, FaTwitter, FaInstagram, FaSnapchat } from 'react-icons/fa';
+import Gallery from './component/Gallery';
 
 
 function App() {
@@ -74,6 +75,10 @@ function App() {
     </div>
   </div>
 </section>
+
+<div className="">
+  <Gallery/>
+</div>
 
 
       {/* Call to Action */}
