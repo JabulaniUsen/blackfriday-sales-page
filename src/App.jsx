@@ -20,7 +20,7 @@ function App() {
   const handleWhitelistSubmit = (e) => {
     e.preventDefault();
     if (email.trim()) {
-      toast.success("Joined the whitelist successfully!");
+      toast.success("Joined the wait list successfully!");
       setEmail(""); 
       setTimeout(() => setShowPopup(false), 1000);
     } else {
