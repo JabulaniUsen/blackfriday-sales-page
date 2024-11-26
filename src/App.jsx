@@ -10,7 +10,7 @@ import socials from './assets/soocial.jpg';
 import graphics from './assets/graphics.png';
 import print from './assets/print.jpg';
 import { BiSolidGift, BiXCircle } from "react-icons/bi";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaSnapchat } from 'react-icons/fa';
 
 
 function App() {
@@ -86,17 +86,13 @@ function App() {
       </section>
 
       {/* Schedule Call Section */}
-<section className="schedule-call dark-theme">
-  <div className="container">
-    <h2>Schedule a Free Consultation</h2>
-    <p>Let’s discuss how we can help you achieve your goals. Our experts are ready to assist you in crafting tailored solutions for your needs.</p>
-    <button className="schedule-call-button">
-      <a href="https://www.tbcreations.com/booking/" target="_blank" rel="noopener noreferrer">
-        Book a Call Now
-      </a>
-    </button>
-  </div>
-</section>
+      <section className="schedule-call">
+        <div className="container">
+          <h2>Schedule a Free Consultation</h2>
+          <p>Let’s discuss how we can help you achieve your goals.</p>
+          <iframe src="https://calendly.com/designer-tb-creations/one-on-one" title="Schedule a call"></iframe>
+        </div>
+      </section>
 
 
 
@@ -116,17 +112,17 @@ function App() {
       <footer className="footer">
         <p>&copy; 2024 Tbcreations. All Rights Reserved.</p>
         <div className="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="http://facebook.com/tbcreations" target="_blank" rel="noopener noreferrer">
             <i className="icon"><FaFacebook /></i>
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="http://twitter.com/tbcreations" target="_blank" rel="noopener noreferrer">
             <i className="icon"><FaTwitter /></i>
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="http://instagram.com/tbcreations" target="_blank" rel="noopener noreferrer">
             <i className="icon"><FaInstagram /></i>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <i className="icon"><FaLinkedin /></i>
+          <a href="https://www.snapchat.com/add/tbcreations" target="_blank" rel="noopener noreferrer">
+            <i className="icon"><FaSnapchat /></i>
           </a>
         </div>
       </footer>
