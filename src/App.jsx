@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from './assets/logo.png';
-import banner from './assets/banner.jpg';
 import webdesign from './assets/webdesign.jpg';
 import wrap from './assets/wrap.jpg';
 import socials from './assets/soocial.jpg';
@@ -12,7 +11,7 @@ import print from './assets/print.jpg';
 import { BiSolidGift, BiXCircle } from "react-icons/bi";
 import { FaFacebook, FaTwitter, FaInstagram, FaSnapchat } from 'react-icons/fa';
 import Gallery from './component/Gallery';
-
+import boxes from './assets/boxes.png' 
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -36,7 +35,7 @@ function App() {
         <div className="logo">
           <img src={logo} alt="Company Logo" />
           <button className='getstarted'>
-            <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">Get Started</a>
+            <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">View website</a>
           </button>
         </div>
         <div className="banner">
@@ -58,8 +57,8 @@ function App() {
               </a>
             </div>
             <button className="cta-button">
-              <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">
-                Claim offer now
+              <a href="#claim">
+                CLAIM NOW
               </a>
             </button>
           </div>
@@ -103,9 +102,7 @@ function App() {
 </section>
 
 
-<div className="">
-  <Gallery/>
-</div>
+
 
 
       {/* Call to Action */}
@@ -118,7 +115,7 @@ function App() {
       </section>
 
       {/* Schedule Call Section */}
-      <section className="schedule-call">
+      <section className="schedule-call" id='claim'>
         <div className="container">
           <h2>Claim Offer now</h2>
           {/* <p>Let’s discuss how we can help you achieve your goals.</p> */}
@@ -139,6 +136,11 @@ function App() {
           </form>
         </div>
       </section>
+
+
+      <div className="">
+        <Gallery/>
+      </div>
 
       {/* Footer */}
       <footer className="footer">

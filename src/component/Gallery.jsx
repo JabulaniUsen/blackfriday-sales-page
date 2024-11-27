@@ -10,6 +10,9 @@ import print5 from '../assets/print5.jpg';
 import print6 from '../assets/print6.jpg';
 import print7 from '../assets/print7.jpg';
 import print8 from '../assets/print8.jpg';
+import print9 from '../assets/print9.jpg';
+import print10 from '../assets/print10.jpg';
+import print11 from '../assets/print11.jpg';
 
 const Gallery = () => {
   const images = [
@@ -21,6 +24,9 @@ const Gallery = () => {
     { src: print8, alt: 'Gallery Image 8' },
     { src: print5, alt: 'Gallery Image 5' },
     { src: print1, alt: 'Gallery Image 1' },
+    { src: print9, alt: 'Gallery Image 9' },
+    { src: print10, alt: 'Gallery Image 10' },
+    { src: print11, alt: 'Gallery Image 11' },
   ];
 
   const settings = {
