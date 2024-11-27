@@ -30,6 +30,13 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
+.moving-box {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  z-index: 1;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -299,14 +306,14 @@ body, h1, p, button {
 }
 
 .getstarted:hover {
-  background-color: #e02528;
-  color: #121212;
+  background-color: #e02528b6;
+  color: #fff;
   transform: scale(1.1);
 }
 
 .cta button:hover {
   background-color: #e02528;
-  color: #121212;
+  color: #fff;
   transform: scale(1.1);
 }
 

@@ -34,36 +34,76 @@ function App() {
       <header className="header">
         <div className="logo">
           <img src={logo} alt="Company Logo" />
-          <button className='getstarted'>
-            <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">View website</a>
+          <button className="getstarted">
+            <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">
+              View website
+            </a>
           </button>
         </div>
         <div className="banner">
-        <div className="hero-section">
-          <div className="overlay"></div>
-          <div className="content">
-            <h1 className="hero-title">
-              Exclusive Black Friday Offer for Your Business
-            </h1>
-            <p className="hero-subtitle">
-              Join thousands of satisfied customers—Rochester’s top-rated graphics design agency with 10+ years of experience.
-            </p>
-            <div className="star-rating">
-              <a href="https://www.google.com/localservices/profile?g2lbs=AOHF13kScSWr64VgpmNfWQeyFDnfMkfgmRd993KS8GW1kebHD5QUdGyQRsEZ2mZgriPEIb18n_A-72Hv-UiOOs87QkPNC_6UzQ%3D%3D&hl=en-NG&gl=ng&cs=1&ssta=1&scp=ChdnY2lkOmNvbW1lcmNpYWxfcHJpbnRlchJAEhIJU7MUlgWz1okRHuYlQfwfAFoiElJvY2hlc3RlciwgTlksIFVTQSoUDVwLsRkVAKyv0R0SVcoZJdSuydEwABoWYmVzdCBncmFwaGljcyBkZXNpZ25lciImYmVzdCBncmFwaGljcyBkZXNpZ25lciBpbiBSb2NoZXN0ZXIgTnkqEkNvbW1lcmNpYWwgcHJpbnRlcg%3D%3D&spp=CgwvZy8xaGh4YzEwcmg6-AJXallRQUJBQkVBSVlBUmdDR0FRWUJTSW1ZbVZ6ZENCbmNtRndhR2xqY3lCa1pYTnBaMjVsY2lCcGJpQnliMk5vWlhOMFpYSWdibm1TQVJCdFlYSnJaWFJwYm1kZllXZGxibU41bWdFa1EyaGtSRk5WYUU1TlJ6bHVVekJXU2xFd1JtNVRWVTVOVG0xU1ZHUnViRUpTVWtGQ3FnR2lBUW9LTDIwdk1ERjRlVFZzWHdvSkwyMHZNREZqT1RjNUNna3ZiUzh3TWpGelpHY0tDUzl0THpBMU9YSmllUW9JTDIwdk1Ia3hjbVlRQVNvYUloWmlaWE4wSUdkeVlYQm9hV056SUdSbGMybG5ibVZ5S0FBeUh4QUJJaHRTRklKbDR2dk5FSFZyeW5ybzZSaUstOFVFYzhDSC1YY1g4dDB5S2hBQ0lpWmlaWE4wSUdkeVlYQm9hV056SUdSbGMybG5ibVZ5SUdsdUlISnZZMmhsYzNSbGNpQnVlUT09&src=2&q=TB+Creations,+LLC&sa=X&ved=2ahUKEwi-6rC61PuJAxWBWEEAHe-DMvsQkbkFegQIKRAD" target="_blank" rel="noopener noreferrer">
-                {[...Array(5)].map((_, index) => (
-                  <span key={index} className="star">&#9733;</span> // Unicode star symbol
-                ))}
-                <span className="rating-text">(4.9/5)</span>
-              </a>
+          <div className="hero-section">
+            <div className="overlay"></div>
+            <div className="content">
+              <h1 className="hero-title">
+                Exclusive Black Friday Offer for Your Business
+              </h1>
+              <p className="hero-subtitle">
+                Join thousands of satisfied customers—Rochester’s top-rated graphics design agency with 10+ years of experience.
+              </p>
+              <div className="star-rating">
+                <a
+                  href="https://www.google.com/localservices/profile?g2lbs=AOHF13kScSWr64VgpmNfWQeyFDnfMkfgmRd993KS8GW1kebHD5QUdGyQRsEZ2mZgriPEIb18n_A-72Hv-UiOOs87QkPNC_6UzQ%3D%3D&hl=en-NG&gl=ng&cs=1&ssta=1&scp=ChdnY2lkOmNvbW1lcmNpYWxfcHJpbnRlchJAEhIJU7MUlgWz1okRHuYlQfwfAFoiElJvY2hlc3RlciwgTlksIFVTQSoUDVwLsRkVAKyv0R0SVcoZJdSuydEwABoWYmVzdCBncmFwaGljcyBkZXNpZ25lciImYmVzdCBncmFwaGljcyBkZXNpZ25lciBpbiBSb2NoZXN0ZXIgTnkqEkNvbW1lcmNpYWwgcHJpbnRlcg%3D%3D&spp=CgwvZy8xaGh4YzEwcmg6-AJXallRQUJBQkVBSVlBUmdDR0FRWUJTSW1ZbVZ6ZENCbmNtRndhR2xqY3lCa1pYTnBaMjVsY2lCcGJpQnliMk5vWlhOMFpYSWdibm1TQVJCdFlYSnJaWFJwYm1kZllXZGxibU41bWdFa1EyaGtSRk5WYUU1TlJ6bHVVekJXU2xFd1JtNVRWVTVOVG0xU1ZHUnViRUpTVWtGQ3FnR2lBUW9LTDIwdk1ERjRlVFZzWHdvSkwyMHZNREZqT1RjNUNna3ZiUzh3TWpGelpHY0tDUzl0THpBMU9YSmllUW9JTDIwdk1Ia3hjbVlRQVNvYUloWmlaWE4wSUdkeVlYQm9hV056SUdSbGMybG5ibVZ5S0FBeUh4QUJJaHRTRklKbDR2dk5FSFZyeW5ybzZSaUstOFVFYzhDSC1YY1g4dDB5S2hBQ0lpWmlaWE4wSUdkeVlYQm9hV056SUdSbGMybG5ibVZ5SUdsdUlISnZZMmhsYzNSbGNpQnVlUT09&src=2&q=TB+Creations,+LLC&sa=X&ved=2ahUKEwi-6rC61PuJAxWBWEEAHe-DMvsQkbkFegQIKRAD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {[...Array(5)].map((_, index) => (
+                    <span key={index} className="star">
+                      &#9733;
+                    </span>
+                  ))}
+                  <span className="rating-text">(4.9/5)</span>
+                </a>
+              </div>
+              <button className="cta-button">
+                <a href="#claim">CLAIM NOW</a>
+              </button>
             </div>
-            <button className="cta-button">
-              <a href="#claim">
-                CLAIM NOW
-              </a>
-            </button>
-          </div>
-        </div>
 
+            {/* Moving Box Images */}
+            <motion.img
+              src={boxes}
+              alt="Box 1"
+              className="moving-box"
+              animate={{ x: [200, 500, -500, 300], y: [0, -100, 80, 100] }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.img
+              src={boxes}
+              alt="Box 2"
+              className="moving-box"
+              animate={{ x: [-200, 300, -400, 320], y: [-20, 20, -30, 0] }}
+              transition={{
+                duration: 9,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.img
+              src={boxes}
+              alt="Box 3"
+              className="moving-box"
+              animate={{ x: [400, -80, 200, -400], y: [10, -100, 200, 0] }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </div>
         </div>
       </header>
 
@@ -110,7 +150,7 @@ function App() {
         <h2>Take Advantage of These Limited-Time Offers!</h2>
         <p>Contact us now to transform your online presence.</p>
         <button>
-          <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">Get Started Today!</a>
+          <a href="#claim" >Get Started Today!</a>
         </button>
       </section>
 
