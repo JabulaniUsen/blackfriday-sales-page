@@ -39,42 +39,69 @@ function App() {
             <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">Get Started</a>
           </button>
         </div>
-        <img className="banner" src={banner} alt="" />
+        <div className="banner">
+        <div className="hero-section">
+          <div className="overlay"></div>
+          <div className="content">
+            <h1 className="hero-title">
+              Exclusive Black Friday Offer for Your Business
+            </h1>
+            <p className="hero-subtitle">
+              Join thousands of satisfied customers—Rochester’s top-rated graphics design agency with 10+ years of experience.
+            </p>
+            <div className="star-rating">
+              <a href="https://www.google.com/localservices/profile?g2lbs=AOHF13kScSWr64VgpmNfWQeyFDnfMkfgmRd993KS8GW1kebHD5QUdGyQRsEZ2mZgriPEIb18n_A-72Hv-UiOOs87QkPNC_6UzQ%3D%3D&hl=en-NG&gl=ng&cs=1&ssta=1&scp=ChdnY2lkOmNvbW1lcmNpYWxfcHJpbnRlchJAEhIJU7MUlgWz1okRHuYlQfwfAFoiElJvY2hlc3RlciwgTlksIFVTQSoUDVwLsRkVAKyv0R0SVcoZJdSuydEwABoWYmVzdCBncmFwaGljcyBkZXNpZ25lciImYmVzdCBncmFwaGljcyBkZXNpZ25lciBpbiBSb2NoZXN0ZXIgTnkqEkNvbW1lcmNpYWwgcHJpbnRlcg%3D%3D&spp=CgwvZy8xaGh4YzEwcmg6-AJXallRQUJBQkVBSVlBUmdDR0FRWUJTSW1ZbVZ6ZENCbmNtRndhR2xqY3lCa1pYTnBaMjVsY2lCcGJpQnliMk5vWlhOMFpYSWdibm1TQVJCdFlYSnJaWFJwYm1kZllXZGxibU41bWdFa1EyaGtSRk5WYUU1TlJ6bHVVekJXU2xFd1JtNVRWVTVOVG0xU1ZHUnViRUpTVWtGQ3FnR2lBUW9LTDIwdk1ERjRlVFZzWHdvSkwyMHZNREZqT1RjNUNna3ZiUzh3TWpGelpHY0tDUzl0THpBMU9YSmllUW9JTDIwdk1Ia3hjbVlRQVNvYUloWmlaWE4wSUdkeVlYQm9hV056SUdSbGMybG5ibVZ5S0FBeUh4QUJJaHRTRklKbDR2dk5FSFZyeW5ybzZSaUstOFVFYzhDSC1YY1g4dDB5S2hBQ0lpWmlaWE4wSUdkeVlYQm9hV056SUdSbGMybG5ibVZ5SUdsdUlISnZZMmhsYzNSbGNpQnVlUT09&src=2&q=TB+Creations,+LLC&sa=X&ved=2ahUKEwi-6rC61PuJAxWBWEEAHe-DMvsQkbkFegQIKRAD" target="_blank" rel="noopener noreferrer">
+                {[...Array(5)].map((_, index) => (
+                  <span key={index} className="star">&#9733;</span> // Unicode star symbol
+                ))}
+                <span className="rating-text">(4.9/5)</span>
+              </a>
+            </div>
+            <button className="cta-button">
+              <a href="http://www.tbcreations.com" target="_blank" rel="noopener noreferrer">
+                Claim offer now
+              </a>
+            </button>
+          </div>
+        </div>
+
+        </div>
       </header>
 
       {/* Services Section */}
-<section className="services">
+      <section className="services">
   <div className="container">
     <h2>Our Services</h2>
     <div className="services-grid">
       <div className="service-card">
         <img src={webdesign} alt="Web Design" className="service-image" />
         <h3>Web Design</h3>
-        <p>Captivating and responsive designs that stand out.</p>
+        <p>Your website will stand out with captivating and responsive designs that attract visitors and drive results.</p>
       </div>
       <div className="service-card">
         <img src={graphics} alt="Graphic Design" className="service-image" />
         <h3>Graphic Design</h3>
-        <p>Captivate your audience with unique and beautiful graphic designs for your social media.</p>
+        <p>Your social media will shine with unique and beautiful graphic designs crafted to captivate your audience.</p>
       </div>
       <div className="service-card">
         <img src={print} alt="Large Format Printing" className="service-image" />
         <h3>Large Format Printing</h3>
-        <p>High-quality, eye-catching prints for banners, posters, and more.</p>
+        <p>Your banners, posters, and prints will grab attention with high-quality, vibrant visuals.</p>
       </div>
       <div className="service-card">
         <img src={wrap} alt="Vehicle Wrapping" className="service-image" />
         <h3>Vehicle Wrapping</h3>
-        <p>Professional vehicle wraps to showcase your brand on the go.</p>
+        <p>Your brand will turn heads on the go with professional vehicle wraps that leave a lasting impression.</p>
       </div>
       <div className="service-card">
         <img src={socials} alt="Social Media Management" className="service-image" />
         <h3>Social Media Management</h3>
-        <p>Grow your online presence with expert social media strategies.</p>
+        <p>Your online presence will grow with expert strategies tailored to engage your audience and boost visibility.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <div className="">
   <Gallery/>
@@ -93,8 +120,8 @@ function App() {
       {/* Schedule Call Section */}
       <section className="schedule-call">
         <div className="container">
-          <h2>Schedule a Free Consultation</h2>
-          <p>Let’s discuss how we can help you achieve your goals.</p>
+          <h2>Claim Offer now</h2>
+          {/* <p>Let’s discuss how we can help you achieve your goals.</p> */}
           <iframe src="https://calendly.com/designer-tb-creations/one-on-one" title="Schedule a call"></iframe>
         </div>
       </section>
